@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Projects Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="hero-section">
+            <h1>GitHub Projects Viewer</h1>
+            <p class="hero-description">הצג את הפרויקטים של GitHub בצורה מרשימה באתר שלך</p>
+        </section>
+
+        <section class="installation-guide">
+            <h2>🚀 מדריך התקנה</h2>
+
+            <div class="step-container">
+                <div class="step">
+                    <h3>1. הוספת הסקריפט</h3>
+                    <p>הוסף את הקוד הבא לפני תג הסגירה של ה-body:</p>
+                    <pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/your-username/github-projects-widget/github-projects-widget.js">&lt;/script></code></pre>
+                </div>
+
+                <div class="step">
+                    <h3>2. הגדרת התצוגה</h3>
+                    <p>הוסף את הקוד הבא למקום בו תרצה להציג את הכפתור:</p>
+                    <pre><code class="language-html">&lt;div id="github-projects-widget">&lt;/div></code></pre>
+                </div>
+
+                <div class="step">
+                    <h3>3. התאמה אישית</h3>
+                    <p>ניתן להתאים את התצוגה באמצעות הגדרות נוספות:</p>
+                    <pre dir="ltr"><code class="language-javascript">
+const widgetConfig = {
+    username: 'your-github-username',
+    theme: 'dark', // או 'light'
+    maxProjects: 10,
+    showLanguages: true,
+    showStars: true
+};
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>✨ תכונות</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎨 עיצוב מודרני</h3>
+                    <p>ממשק משתמש נקי ומודרני עם אנימציות חלקות</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 תמיכה במובייל</h3>
+                    <p>תצוגה מותאמת לכל גודל מסך</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌓 מצב כהה</h3>
+                    <p>תמיכה מלאה במצב כהה ובהיר</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 חיפוש וסינון</h3>
+                    <p>אפשרויות חיפוש וסינון מתקדמות</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h2>🎮 הדגמה חיה</h2>
+            <p>לחץ על כפתור ה-GitHub בפינה הימנית התחתונה כדי לראות את התוסף בפעולה</p>
+        </section>
+    </main>
+
+    <!-- Widget Container -->
+    <div id="github-projects-widget" class="widget-container">
+        <button id="toggle-projects" class="toggle-btn">
+            <svg class="github-icon" viewBox="0 0 16 16" width="24" height="24">
+                <path fill="white"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div id="projects-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">לאון יעקובוב</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-scroll-container">
+                <div class="profile-section">
+                    <div class="profile-header">
+                        <img src="https://avatars.githubusercontent.com/u/83116688" alt="Leon Yaakobov"
+                            class="profile-avatar">
+                        <h1 class="profile-title">לאון יעקובוב 👨‍💻</h1>
+                        <div class="profile-motto">מומחה תקשורת ומדעי המחשב 🚀</div>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="profile-contact">
+                            <a href="mailto:areweleon@gmail.com" class="contact-item">
+                                <span>📧 areweleon@gmail.com</span>
+                            </a>
+                            <a href="tel:+972543285967" class="contact-item">
+                                <span>📱 054-3285967</span>
+                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=972543285967"
+                                class="contact-item whatsapp-btn" target="_blank">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+
+                        <div class="profile-bio">
+                            <h3>📝 סיכום מקצועי</h3>
+                            <p>טכנאי ומתקין בעל ניסיון עשיר של 10+ שנים בתחום התקשורת 📡 ו-15+ שנות ניסיון במחקר מדעי
+                                המחשב
+                                💻. מתמחה בפתרונות טכנולוגיים חכמים 💡 ללקוחות פרטיים ועסקיים, עם התמחות בהתקנות
+                                אינטרנט,
+                                טלוויזיה 📺, וטלפוניה ☎️. מצטיין בזריזות, אחריות, ויכולת פתרון בעיות מורכבות 🔧 תוך
+                                שמירה על
+                                סטנדרטים גבוהים של שירות ⭐.</p>
+                        </div>
+
+                        <div class="experience-section">
+                            <h3>💼 ניסיון תעסוקתי</h3>
+
+                            <div class="experience-item">
+                                <h4>מתקין בכיר וטכנאי תקשורת</h4>
+                                <div class="experience-details">הוט, חברות קבלנות | 2011 - היום</div>
+                                <ul>
+                                    <li>10+ שנות ניסיון בהתקנת מערכות תקשורת (אינטרנט, טלוויזיה, טלפוניה) ללקוחות פרטיים
+                                        ועסקיים. 🏠🏢</li>
+                                    <li>מתמחה בפתרון בעיות טכניות בזמן אמת 🔧 ובניהול פרויקטים טכניים מורכבים עבור
+                                        לקוחות
+                                        עסקיים. 📊</li>
+                                </ul>
+                            </div>
+
+                            <div class="experience-item">
+                                <h4>חוקר ויוצר בתחום מדעי המחשב</h4>
+                                <div class="experience-details">עצמאי | 2006 - היום</div>
+                                <ul>
+                                    <li>15+ שנות ניסיון במחקר עצמאי, פיתוח תוכנות ומשחקים 🎮 תוך שימוש בטכנולוגיות
+                                        מתקדמות.
+                                        🚀</li>
+                                    <li>מומחה בפתרון בעיות טכנולוגיות מותאמות אישית לצורכי המשתמשים. 🎯</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3>🛠 כישורים טכניים</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">📡 מומחיות בהתקנת תשתיות תקשורת</div>
+                                <div class="skill-item">🎮 פיתוח תוכנות ומשחקים</div>
+                                <div class="skill-item">🔧 פתרון בעיות מורכבות</div>
+                                <div class="skill-item">🛠 שימוש בכלים מתקדמים</div>
+                                <div class="skill-item">🤝 שירותיות ואחריות גבוהה</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters-section">
+                    <div class="search-box">
+                        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z">
+                            </path>
+                        </svg>
+                        <input type="text" placeholder="חיפוש פרויקטים..." id="search-projects">
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn" data-sort="name">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25V2.75C1 1.784 1.784 1 2.75 1ZM2.75 2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25H2.75ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.75.75 0 1 1-1.06-1.06L5.44 8 3.72 6.28a.75.75 0 1 1 1.06-1.06l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5Z">
+                                </path>
+                            </svg>
+                            מיון לפי שם
+                        </button>
+                        <button class="filter-btn" data-sort="stars">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z">
+                                </path>
+                            </svg>
+                            מיון לפי כוכבים
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-content" id="projects-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
